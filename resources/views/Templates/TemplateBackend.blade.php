@@ -143,10 +143,7 @@
         </aside>
         <!-- Inicio -->
         <aside class="right-side">
-            <div class="alert alert-success alert-dismissable margin5" style="display: none;">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Success:</strong> You have successfully logged in.
-            </div>
+      
             <!-- Main content -->
             <section class="content-header">
                      <!-- Titulo de navegacion -->
@@ -186,8 +183,9 @@
     <script type="text/javascript" src="vendors/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
     <!--page level js-->
     <script src="js/pages/todolist.js" type="text/javascript"></script>
-    <script src="js/pages/dashboard.js" type="text/javascript"></script>
-    <!-- end of page level js -->
+    
+    <!-- end of page level js 
+    <script src="js/pages/dashboard.js" type="text/javascript"></script>-->
 </body>
 
 
