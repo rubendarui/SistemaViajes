@@ -120,21 +120,28 @@
                             </a>
                         </li>
                        
-                        <li>
-                            <a href="#">
-                                <i class="material-icons text-info leftsize">assignment</i>
-                                <span class="title">Forms</span>
-                                <span class="fa arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="form_examples.html">
-                                        <i class="material-icons">keyboard_arrow_right</i> Form Examples
-                                    </a>
-                                </li>
-                               
+          
+
+                         @foreach ($titulo as $user)
+      <li><a href="#" > 
+                <i class="material-icons text-info leftsize">{{ $user->font }}</i> 
+    <span class="title">{{ $user->nombre }}</span>
+    <span class="fa arrow"></span>
+        </a>
+                            <ul   class="sub-menu">
+                                @foreach ($subtitulo as $sub)
+                                
+                                @if ($sub->padre==$user->id)
+                                <li><a href="{{ $sub->url }}"> 
+                                         <i class="material-icons">keyboard_arrow_right</i>{{ $sub->nombre }}
+                                </a></li>
+
+                                @endif
+                                
+                                @endforeach
                             </ul>
                         </li>
+                        @endforeach
                         
                     <!-- END SIDEBAR MENU -->
                 </div>
@@ -152,6 +159,7 @@
             </section>
             <section class="content">
                        <!-- Contenido, formularios  -->
+
             </section>
         </aside>
        

@@ -1,0 +1,51 @@
+--
+-- Base de datos: `bdtravelsoft`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `objeto`
+--
+
+CREATE TABLE `objeto` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(20) NOT NULL,
+  `url` varchar(25) NOT NULL,
+  `tipoobjeto` varchar(15) NOT NULL,
+  `idmodulo` int(11) NOT NULL,
+  `eliminar` tinyint(2) NOT NULL,
+  `habilitado` tinyint(2) NOT NULL,
+  `padre` tinyint(2) NOT NULL,
+  `font` varchar(20) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `objeto`
+--
+
+INSERT INTO `objeto` (`id`, `nombre`, `url`, `tipoobjeto`, `idmodulo`, `eliminar`, `habilitado`, `padre`, `font`, `created_at`, `updated_at`) VALUES
+(1, 'Configuraciones', 'Config', 'Titulo', 1, 1, 0, 0, 'assignment', '2017-09-19 15:04:01', '0000-00-00 00:00:00'),
+(2, 'cafe', '/cafe', 'Formulario', 1, 0, 0, 1, '', '2017-09-19 15:03:58', '0000-00-00 00:00:00');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `objeto`
+--
+ALTER TABLE `objeto`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `objeto`
+--
+ALTER TABLE `objeto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
